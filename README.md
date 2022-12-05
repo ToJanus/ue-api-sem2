@@ -1,1 +1,1 @@
-# ue-api-sem2
+# API for school

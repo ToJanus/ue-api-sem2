@@ -41,26 +41,4 @@ async def invert(file: UploadFile):
 
 @app.get("/currenttime")
 def current_time(username: str = Depends(get_current_username)):
-    return {"currenttime": time.strftime("%a, %d %b %Y %H:%M:%S %z", time.localtime())}
-
-
-
-# import uvicorn
-
-# if __name__ == "__main__":
-#     uvicorn.run("app.api:app", host="0.0.0.0", port=8080, reload=True)
-
-
-
-# how to deploy python api for free
-# https://wiki.python.org/moin/FreeHosts
-# https://fastapi.tiangolo.com/deployment/concepts/
-
-# https://www.youtube.com/watch?v=gVymPpepQco
-# https://www.youtube.com/watch?v=SgSnz7kW-Ko
-# https://www.youtube.com/watch?v=L0aXq0BEjbI
-
-# https://towardsdatascience.com/how-to-deploy-a-machine-learning-model-with-fastapi-docker-and-github-actions-13374cbd638a
-# https://testdriven.io/blog/fastapi-machine-learning/
-
-# https://towardsdatascience.com/step-by-step-approach-to-build-your-machine-learning-api-using-fast-api-21bd32f2bbdb
+    return {"currenttime": time.strftime("%a, %d %b %Y %H:%M:%S %z")} # , time.localtime()
