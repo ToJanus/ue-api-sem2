@@ -44,6 +44,7 @@ def current_time(username: str = Depends(get_current_username)):
     return {"currenttime": time.strftime("%a, %d %b %Y %H:%M:%S %z", time.localtime())}
 
 
+
 # import uvicorn
 
 # if __name__ == "__main__":
