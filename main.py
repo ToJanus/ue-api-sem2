@@ -1,8 +1,7 @@
-# uvicorn main:app --reload
-
 import io
 import numpy as np
-import time
+import pytz
+from datetime import datetime
 
 from fastapi import FastAPI, Depends, Path, Response, UploadFile
 from PIL import Image
@@ -41,4 +40,4 @@ async def invert(file: UploadFile):
 
 @app.get("/currenttime")
 def current_time(username: str = Depends(get_current_username)):
-    return {"currenttime": time.strftime("%a, %d %b %Y %H:%M:%S %z")} # , time.localtime()
+    return {"currenttime": datetime.now(pytz.timezone('Europe/Warsaw')).strftime("%a, %d %b %Y %H:%M:%S %z")}
