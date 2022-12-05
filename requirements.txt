@@ -1,0 +1,6 @@
+fastapi[all]==0.88.0
+numpy==1.23.3
+Pillow==9.3.0
+sympy==1.11.1
+python-multipart==0.0.5
+python-dotenv==0.21.0
